@@ -29,7 +29,7 @@
       <h3><strong>Customer Notes</strong></h3>
       <p><textarea type="text" v-model="user.notes"></textarea></p>
       <button @click="updateNotes()">Save</button>
-      <button @click="editing = null">Cancel</button>
+      <button @click="cancelEditNotes()">Cancel</button>
     </div>
 
     <div v-else>
@@ -49,6 +49,7 @@ export default {
   name: 'customer-details',
   data() {
     return {
+      beforeEdit: "",
       editing: null
     }
   },
@@ -63,12 +64,18 @@ export default {
   methods: {
     editNotes(id) {
       this.editing = id;
+      this.beforeEdit = Object.assign({}, this.user)
     },
     ...mapActions(['updateCustomer']),
     updateNotes() {
       this.updateCustomer(this.user);
       this.editing = null
       // console.log(value)
+    },
+    cancelEditNotes() {
+      this.editing = null
+      // this.user.assign( this.user, this.beforeEdit)
+      Object.assign(this.user, this.beforeEdit)
     }
   }
 }

@@ -3,7 +3,7 @@
 
   <div v-if="editing === value.id" class="edit">
     <button @click="updateUser(value)">Save</button>
-    <button class="muted-button" @click="editing = null">Cancel</button>
+    <button class="muted-button" @click="cancelEditUser">Cancel</button>
   </div>
   <div v-else class="edit">
     <button @click="editMode(value.id)">Edit Measurements</button>
@@ -260,10 +260,11 @@ export default {
     value: {
       type: Object,
       required: true,
-      width: {
-        type: Number,
-        default: 100
-      }
+      // width: {
+      //   type: Number,
+      //   default: 100
+      // }
+      beforeEdit: ""
     }
   },
   methods: {
@@ -282,6 +283,11 @@ export default {
     },
     editMode(id) {
       this.editing = id
+      this.beforeEdit = Object.assign({}, this.value)
+    },
+    cancelEditUser() {
+      this.editing = null
+      Object.assign(this.value, this.beforeEdit)
     }
   }
 }

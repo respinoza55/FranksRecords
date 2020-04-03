@@ -17,7 +17,7 @@
         <tr>
           <th scope="col">Name</th>
           <th scope="col">Phone</th>
-          <th scope="col">Weight</th>
+          <th scope="col">Ball & Weight</th>
         </tr>
       </thead>
       <tbody v-if="searchType ==='Phone'">
