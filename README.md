@@ -12,6 +12,9 @@ npm install
 <br>
 ![alt text](screenshots/SearchRecords.png "Home Page")
 
+
+![alt text](screenshots/Search.png "Home Page")
+
 ### Running Locally
 ```
 npm run serve
