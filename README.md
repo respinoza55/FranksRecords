@@ -1,5 +1,7 @@
 # Franks app
 
+This app creates, updates, and searches for customers of a bowling shop.  Their name, phone, bowling ball infor, and mesaurements will be saved.
+
 ## Project setup
 ```
 npm install
