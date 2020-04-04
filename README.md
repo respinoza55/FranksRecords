@@ -1,4 +1,4 @@
-# franks-app
+# Franks app
 
 ## Project setup
 ```
