@@ -2,17 +2,17 @@
 
 This app creates, updates, and searches for customers of a bowling shop.  Their name, phone, bowling ball infor, and mesaurements will be saved.
 
-## Project setup
+## Table of Contents
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Running Locally
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Tech Stack
 ```
 npm run build
 ```
