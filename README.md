@@ -9,9 +9,7 @@ npm install
 ## Screenshots
 
 ![alt text](screenshots/HomePage.png "Home Page")
-
-![alt text](screenshots/SearchRecords.png "Home Page")
-
+...
 
 ![alt text](screenshots/Search.png "Home Page")
 
