@@ -6,6 +6,9 @@ This app creates, updates, and searches for customers of a bowling shop.  Their 
 ```
 npm install
 ```
+## Screenshots
+
+![alt text](screenshots/HomePage.png "Home Page")
 
 ### Running Locally
 ```
