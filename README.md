@@ -12,7 +12,11 @@ npm install
 
 
 
-![alt text](screenshots/Search.png "Home Page")
+![alt text](screenshots/Search.png "Search Page")
+
+
+
+![alt text](screenshots/CreateRecord.png "Create Page")
 
 ### Running Locally
 ```
