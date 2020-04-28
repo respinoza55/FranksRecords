@@ -5,18 +5,18 @@ This app creates, updates, and searches for customers of a bowling shop.  The cu
 ## Table of Contents
 
 1. [Running Locally](#running-locally)
-2. Tech Stack
-3. Screen Shots
+2. [Tech Stack](#tech-stack)
+3. [Screen Shots](#screenshots)
 4. Routes
 
 
-### Running Locally
+## Running Locally
 ```
 1. Clone this repo
 2. cd franks-app
 3. npm run serve
 ```
-### Tech Stack
+## Tech Stack
 ```
 1. Vue.js/Vue Router/Vuex
 2. JSON
@@ -34,7 +34,7 @@ This app creates, updates, and searches for customers of a bowling shop.  The cu
 
 ![alt text](screenshots/CreateRecord.png "Create Page")
 
-### Routes
+## Routes
 ```
 - / --> Home page/Landing Page 
 - /id --> view single customer record
