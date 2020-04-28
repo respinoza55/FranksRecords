@@ -7,6 +7,8 @@ This app creates, updates, and searches for customers of a bowling shop.  The cu
 1. Running Locally
 2. Tech Stack
 3. Screen Shots
+4. Routes
+
 ```
 
 ### Running Locally
@@ -33,19 +35,13 @@ This app creates, updates, and searches for customers of a bowling shop.  The cu
 
 ![alt text](screenshots/CreateRecord.png "Create Page")
 
-### Running Locally
+### Routes
 ```
-npm run serve
-```
-
-### Tech Stack
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+dot / --> Home page/Landing Page
+dot /id --> view single customer record
+dot create --> Create a new customer record
+dot search --> Search custoemrs by phone number or name
+dot search/id --> view single customer record
 ```
 
 ### Customize configuration
