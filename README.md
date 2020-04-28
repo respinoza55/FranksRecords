@@ -9,7 +9,6 @@ This app creates, updates, and searches for customers of a bowling shop.  The cu
 3. [Screen Shots](#screenshots)
 4. [Routes](#routes)
 
-
 ## Running Locally
 
 1. Clone this repo
@@ -17,10 +16,9 @@ This app creates, updates, and searches for customers of a bowling shop.  The cu
 3. npm run serve
 
 ## Tech Stack
-```
+
 1. Vue.js/Vue Router/Vuex
 2. JSON
-```
 
 ## Screenshots
 
@@ -35,13 +33,13 @@ This app creates, updates, and searches for customers of a bowling shop.  The cu
 ![alt text](screenshots/CreateRecord.png "Create Page")
 
 ## Routes
-```
+
 - / --> Home page/Landing Page 
 - /id --> view single customer record
 - create --> Create a new customer record
 - search --> Search custoemrs by phone number or name
 - search/id --> view single customer record
-```
+
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
