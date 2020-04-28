@@ -10,7 +10,7 @@ This app creates, updates, and searches for customers of a bowling shop.  The cu
 4. Routes
 
 
-### [Running Locally]
+### Running Locally
 ```
 1. Clone this repo
 2. cd franks-app
