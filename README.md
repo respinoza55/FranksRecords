@@ -40,7 +40,3 @@ This app creates, updates, and searches for customers of a bowling shop.  The cu
 - search --> Search custoemrs by phone number or name
 - search/id --> view single customer record
 
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-"# FranksRecords" 
