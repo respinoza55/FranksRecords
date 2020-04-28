@@ -37,11 +37,11 @@ This app creates, updates, and searches for customers of a bowling shop.  The cu
 
 ### Routes
 ```
-dot / --> Home page/Landing Page
-dot /id --> view single customer record
-dot create --> Create a new customer record
-dot search --> Search custoemrs by phone number or name
-dot search/id --> view single customer record
+* / --> Home page/Landing Page
+* /id --> view single customer record
+* create --> Create a new customer record
+* search --> Search custoemrs by phone number or name
+* search/id --> view single customer record
 ```
 
 ### Customize configuration
