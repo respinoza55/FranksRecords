@@ -11,7 +11,7 @@ This app creates, updates, and searches for customers of a bowling shop.  The cu
 
 ```
 
-## Example <a name="example></a>
+## Running Locally <a name="example></a>
 ```
 1. Clone this repo
 2. cd franks-app
