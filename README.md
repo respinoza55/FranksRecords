@@ -1,16 +1,29 @@
-# franks-app
+# Franks app
 
-## Project setup
+This app creates, updates, and searches for customers of a bowling shop.  Their name, phone, bowling ball infor, and mesaurements will be saved.
+
+## Table of Contents
 ```
 npm install
 ```
+## Screenshots
 
-### Compiles and hot-reloads for development
+![alt text](screenshots/HomePage.png "Home Page")
+
+
+
+![alt text](screenshots/Search.png "Search Page")
+
+
+
+![alt text](screenshots/CreateRecord.png "Create Page")
+
+### Running Locally
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Tech Stack
 ```
 npm run build
 ```
