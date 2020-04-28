@@ -6,18 +6,38 @@
       <caption>Display customer details</caption>
       <thead>
         <tr>
-          <th  scope="col">Customer Name</th>
+          <th scope="col">Customer Name</th>
           <th scope="col">Phone Number</th>
           <th scope="col">Ball & Weight</th>
+          <th scope="col">Edit</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
 
-        <td>{{ this.user.full_name }}</td>
-        <td>{{ this.user.phone }}</td>
-        <td>{{ this.user.ballWeight }}</td>
-      </tr>
+      <tbody v-if="editing === user.id">
+        <tr>
+          <td>
+            <input type="text" v-model="user.full_name">
+          </td>
+          <td>
+            <input type="text" v-model="user.phone">
+          </td>
+          <td>
+            <input type="text" v-model="user.ballWeight">
+          </td>
+          <td>
+            <button @click="update()">Save</button>
+            <button @click="cancelEdit()">Cancel</button>
+          </td>
+        </tr>
+      </tbody>
+
+      <tbody v-else>
+        <tr>
+          <td>{{ this.user.full_name }}</td>
+          <td>{{ this.user.phone }}</td>
+          <td>{{ this.user.ballWeight }}</td>
+          <td><button @click="edit(user.id)">Edit</button></td>
+        </tr>
       </tbody>
     </table>
 
@@ -28,14 +48,14 @@
     <div v-if="editing === user.id">
       <h3><strong>Customer Notes</strong></h3>
       <p><textarea type="text" v-model="user.notes"></textarea></p>
-      <button @click="updateNotes()">Save</button>
-      <button @click="cancelEditNotes()">Cancel</button>
+      <button @click="update()">Save</button>
+      <button @click="cancelEdit()">Cancel</button>
     </div>
 
     <div v-else>
       <h3><strong>Customer Notes</strong></h3>
       <div class="notes">{{ this.user.notes }}</div>
-      <button @click="editNotes(user.id)">Edit Notes</button>
+      <button @click="edit(user.id)">Edit Notes</button>
     </div>
 
   </div>
@@ -62,19 +82,20 @@ export default {
     }
   },
   methods: {
-    editNotes(id) {
+    edit(id) {
       this.editing = id;
       this.beforeEdit = Object.assign({}, this.user)
     },
     ...mapActions(['updateCustomer']),
-    updateNotes() {
+    update() {
       this.updateCustomer(this.user);
       this.editing = null
-      // console.log(value)
     },
-    cancelEditNotes() {
+    // updatePerson() {
+    //   this.updateCustomer(this.user)
+    // },
+    cancelEdit() {
       this.editing = null
-      // this.user.assign( this.user, this.beforeEdit)
       Object.assign(this.user, this.beforeEdit)
     }
   }
@@ -82,16 +103,22 @@ export default {
 </script>
 
 <style scoped>
-
 #view-measure {
   border: 2px solid black;
   margin: auto;
-  width: 60%;
+  width: 70%;
   font-size: 25px;
 }
 
+.groups {
+  display: flex;
+}
+
+.columns {
+  display: flex;
+}
+
 .notes {
-/* style="white-space: pre-line" */
   white-space: pre-line;
   font-size: 20px;
 }

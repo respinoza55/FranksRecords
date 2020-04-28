@@ -88,7 +88,7 @@
 
   <div class="spans">
     <div><input class="spanInput" type="text" v-model="span1" placeholder="total span"/></div>
-    <div><strong>SPANS</strong></div>
+    <div class="spans-label"><strong>TOTAL SPANS</strong></div>
     <div><input class="spanInput" type="text" v-model="span2" placeholder="total span"/></div>
   </div>
     
@@ -164,27 +164,8 @@ export default {
                                   bPitch3: this.bPitch3,
                                   drillBit3:  this.drillBit3 })
 
-      // this.leftHand = false;
-      // this.rightHand = false;
-      // this.pitch1 = ""
-      // this.pitch2 = ""
-      // this.pitch3 = ""
-      // this.pitch4 = ""
-      // this.pitch5 = ""
-      // this.pitch6 = ""
-      // this.cut1 = ""
-      // this.cut2 = ""
-      // this.drillBit1 = ""
-      // this.drillBit2 = ""
-      // this.span1 = ""
-      // this.span2 = ""
-      // this.bPitch1 = ""
-      // this.bPitch2 = ""
-      // this.bPitch3 = ""
-      // this.drillBit3 = ""
-
-
                                   this.saved=true
+             
     },
     clickedLeft() {
       if (this.rightHand === true)
@@ -200,89 +181,96 @@ export default {
 
 <style scoped>
 
-  .saved {
-    text-align: center;
-    font-size: 25px;
-    color: red;
-  }
+.spans-label {
+  font-size: 25px;
+}
 
-  .pitches {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 10px;
-    height: 80px;
-  }
-  
-  #thumbs {
-    border-style: solid;
-    padding: 20px;
-  }
-  .inserts {
-    display: flex;
-    align-items: center;
-  }
-  .spans {
-    display: flex;
-    justify-content: space-between;
-  }
+.saved {
+  text-align: center;
+  font-size: 25px;
+  color: red;
+}
 
-  .fingers {
-    margin: 0 auto;
-    padding: 0;
-    justify-content: center;
-    width: 200px;
-  }
+.pitches {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  height: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
-  #circle {
-    display: flex;
-    align-items: center;
-    border: 2px solid black;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 15px;
-    justify-content: center;
-    margin: 6px;
-  }
+#thumbs {
+  border-style: solid;
+  padding: 20px;
+}
+.inserts {
+  display: flex;
+  align-items: center;
+}
+.spans {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
-  .circles-container {
-    display: flex;
-    justify-content: space-around;
-  }
+.fingers {
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+  width: 200px;
+}
 
-  .row {
-    display: flex;
-    justify-content: center;
-  }
+#circle {
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 15px;
+  justify-content: center;
+  margin: 6px;
+}
 
-  .checks {
-    display: flex;
-    justify-content: space-around;
-  }
+.circles-container {
+  display: flex;
+  justify-content: space-around;
+}
 
-  .outside {
-    display: flex;
-    align-items: center;
-    width: 100px;
-    height: 200px;
-    margin: 15px;
-    justify-content: center;
-  }
+.row {
+  display: flex;
+  justify-content: center;
+}
 
-  .bottom {
-    display: flex;
-    justify-content: center;
-    /* width: 150px; */
-    /* margin: 0 auto; */
-  }
+.checks {
+  display: flex;
+  justify-content: space-around;
+}
 
-  input, label {
-    text-align: center;
-    width: 100px;
-  }
+.outside {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: 200px;
+  margin: 15px;
+  justify-content: center;
+}
 
-  label {
-    width: 100px;
-    height: 20px;
-  }
+.bottom {
+  display: flex;
+  justify-content: center;
+}
+
+input, label {
+  text-align: center;
+  width: 150px;
+  font-size: 25px;
+}
+
+label {
+  width: 100px;
+  height: 20px;
+}
 </style>

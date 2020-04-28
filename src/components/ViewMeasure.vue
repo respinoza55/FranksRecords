@@ -15,7 +15,7 @@
     </label>
   </div>
   
-  <div v-else>
+  <div v-else class="checks">
     <label for="right">
     Right Handed
     </label>
@@ -23,19 +23,18 @@
 
   <br>
 
-
   <div v-if="editing === value.id">
     <div class="pitches">
       <div>
         <div class="values">
           <input type="text" v-model="value.pitch1">
-          </div><div class="posLabel">pitch1</div>
+          </div><div class="posLabel">High Pitch</div>
       </div>
       <div>
         <div class="values">
           <input type="text" v-model="value.pitch2">
         </div>
-        <div class="posLabel">pitch2</div>
+        <div class="posLabel">High Pitch</div>
       </div>
     </div>
 
@@ -43,13 +42,13 @@
       <div>
         <div class="values">
           <input type="text" v-model="value.pitch3">
-          </div><div class="posLabel">pitch3</div>
+          </div><div class="posLabel">Side Pitch</div>
       </div>
       <div>
         <div class="values">
           <input type="text" v-model="value.pitch4">
         </div>
-        <div class="posLabel">pitch4</div>
+        <div class="posLabel">Side Pitch</div>
       </div>
     </div>
 
@@ -57,13 +56,13 @@
       <div>
         <div class="values">
           <input type="text" v-model="value.pitch5">
-          </div><div class="posLabel">pitch5</div>
+          </div><div class="posLabel">Reverse Pitch</div>
       </div>
       <div>
         <div class="values">
           <input type="text" v-model="value.pitch6">
         </div>
-        <div class="posLabel">pitch6</div>
+        <div class="posLabel">Reverse Pitch</div>
       </div>
     </div>
   </div>
@@ -72,12 +71,12 @@
       <div>
         <div class="values">
           {{ value.pitch1 }}
-          </div><div class="posLabel">pitch1</div>
+          </div><div class="posLabel">High Pitch</div>
       </div>
       <div>
         <div class="values">
           {{ value.pitch2 }}
-          </div><div class="posLabel">pitch2</div>
+          </div><div class="posLabel">High Pitch</div>
       </div>
     </div>
 
@@ -85,12 +84,12 @@
       <div>
         <div class="values">
           {{ value.pitch3 }}
-          </div><div class="posLabel">pitch3</div>
+          </div><div class="posLabel">Side Pitch</div>
       </div>
       <div>
         <div class="values">
           {{ value.pitch4 }}
-          </div><div class="posLabel">pitch4</div>
+          </div><div class="posLabel">Side Pitch</div>
       </div>
     </div>
 
@@ -98,19 +97,19 @@
       <div>
         <div class="values">
           {{ value.pitch5 }}
-        </div><div class="posLabel">pitch5</div>
+        </div><div class="posLabel">Reverse Pitch</div>
       </div>
       <div>
         <div class="values">
           {{ value.pitch6 }}
-          </div><div class="posLabel">pitch6</div>
+          </div><div class="posLabel">Reverse Pitch</div>
       </div>
     </div>
   </div>
 
   <div  v-if="editing === value.id" class="circles-container">
     <div class="inserts">
-      <div>
+      <div class="values">
         <input type="text" v-model="value.cut1">
         <div class="posLabel">CUT</div>
       </div>  
@@ -129,7 +128,7 @@
       </div>
     </div>
     <div class="inserts">
-      <div>
+      <div class="values">
         <input type="text" v-model="value.cut2">
         <div class="posLabel">CUT</div>
       </div>  
@@ -164,11 +163,11 @@
   </div>
 
   <div v-if="editing === value.id" class="spans">
-    <div>
+    <div class="values">
       <input type="text" v-model="value.span1">
     </div>  
     <div><strong>SPANS</strong></div>
-    <div>
+    <div class="values">
       <input type="text" v-model="value.span2">
     </div>  
   </div>
@@ -230,7 +229,7 @@
     </div>
 
     <div v-if="editing === value.id" class="bottom">
-      <div>
+      <div class="values">
         <input type="text" v-model="value.bPitch3">
         <div class="posLabel">pitch</div>
       </div>
@@ -260,22 +259,10 @@ export default {
     value: {
       type: Object,
       required: true,
-      // width: {
-      //   type: Number,
-      //   default: 100
-      // }
       beforeEdit: ""
     }
   },
   methods: {
-    // clickedLeft() {
-    //   if (this.value.rightHand === true)
-    //     this.rightHand = false
-    // },
-    // clickedRight() {
-    //   if (this.value.leftHand === true)
-    //     this.leftHand = false
-    // },
     ...mapActions(['updateCustomer']),
     updateUser() {
       this.updateCustomer(this.value);
@@ -294,6 +281,25 @@ export default {
 </script>
 
 <style scoped>
+
+
+#view-measure {
+  /* background-image: url('/src/assets/lines.svg'); */
+  background-image: url('~@/assets/lines.svg');
+  background-color: red;
+  padding-bottom: 30px;
+}
+
+/* 1600 x 900 middle screen */
+@media screen and (max-width: 1600px) {
+  #view-measure {
+    background-color: green;
+    background-image: url('~@/assets/linesSmall.svg');
+  }
+}
+
+
+/* this is for the editing boxes */
 .edit {
   display: flex;
   justify-content: center;
@@ -319,7 +325,8 @@ export default {
 
 .checks {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  font-size: 30px;
 }
 
 .pitches {
@@ -336,6 +343,7 @@ export default {
 .spans {
   display: flex;
   justify-content: space-between;
+  margin: 30px 0;
 }
 
 #circle {
@@ -357,7 +365,7 @@ export default {
 
 .row {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .outside {
@@ -365,7 +373,7 @@ export default {
   align-items: center;
   width: 100px;
   height: 200px;
-  margin: 15px;
+  margin: 30px;
   justify-content: center;
 }
 
