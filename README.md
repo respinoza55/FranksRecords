@@ -4,7 +4,9 @@ This app creates, updates, and searches for customers of a bowling shop.  The cu
 
 ## Table of Contents
 ```
-npm install
+1. Running Locally
+2. Tech Stack
+3. Screen Shots
 ```
 ## Screenshots
 
