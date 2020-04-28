@@ -4,7 +4,7 @@ This app creates, updates, and searches for customers of a bowling shop.  The cu
 
 ## Table of Contents
 ```
-1. [Running Locally](#running-locally)
+1. [Running Locally](#-running-locally)
 2. Tech Stack
 3. Screen Shots
 4. Routes
