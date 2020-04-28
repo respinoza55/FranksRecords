@@ -11,34 +11,11 @@ export default {
   name: 'App',
   components: {
     Navigation
-  },
-  methods: {
-    addCustomer(customer) {
-      const lastId = this.customers.length > 0
-        ? this.customers[this.customers.length - 1].id
-        : 0;
-    const id = lastId + 1;
-    const newCustomer = {...customer, id};
-    this.customers = [...this.customers, newCustomer];
-    },
-    deleteCustomer(id) {
-      this.customers = this.customers.filter(
-        customer => customer.id !== id
-      )
-    },
-    editCustomer(id, updatedCustomer) {
-      this.customer = this.customers.map(customer =>
-        customer.id === id ? updatedCustomer : customer
-      )
-    }
   }
 }
 </script>
 
 <style>
-  /* input {
-    color: white;
-  } */
 
   .input:focus {
     border-color: #80bdff;
